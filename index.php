@@ -31,7 +31,7 @@
     <!-- header section 1 -->
     <section class="" id="">
         <header class="header">
-            <nav class="navbar navbar-light bg-light">
+            <nav class="navbar navbar-light bg-warning">
                 <div class="container">
                     <div class="col-4">
                         <a class="navbar-brand" href="#">
@@ -119,7 +119,7 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="src/img/slider imgs/1.png" class="d-block w-100" alt="...">
+                        <img src="src/img/slider imgs/1.png" style="height:450px" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <div class="btn-shop">
                                 <button class="btn-lg btn-warning ">Shop Now</button>
