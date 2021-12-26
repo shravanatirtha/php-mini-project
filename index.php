@@ -40,12 +40,14 @@
                         </a> -->
                     </div>
                     <div class="col-4">
+                    <form class="pt-12  " method="post" action="./searchBookValidate.php">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control"
-                                placeholder="Search for books" aria-label="Recipient's username"
+                            <input type="text" class="form-control" name="pid"
+                                placeholder="Search for books" aria-label="Search for books"
                                 aria-describedby="basic-addon2">
                             <button type="submit" class="input-group-text" id="basic-addon2"><i class="fa fa-search"></i></button>
                         </div>
+</form>
                     </div>
                     <div class="col-4">
                         <ul class="nav justify-content-end">

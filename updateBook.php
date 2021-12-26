@@ -25,18 +25,18 @@
               <div class="brand-logo">
                 <img src="./newBook_files/logo.svg">
               </div>
-              <h4>Add book</h4>
+              <h4>Update book</h4>
               <!-- <h6 class="font-weight-light">Sign in to continue.</h6> -->
-              <form class="pt-12  " method="post" action="./newBookValidate.php">
+              <form class="pt-12  " method="post" action="./updateBookValidate.php">
                 <div class="form-group">
                   <input type="text" class="form-control form-control-lg" name="pid" id="exampleInputEmail1" placeholder="PID" required>
                 </div>
                 <div class="form-group">
                    </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <input type="text" class="form-control form-control-lg" name="title" id="exampleInputEmail1" placeholder="Title" required>
-                </div>
-                <div class="form-group">
+                </div> -->
+                <!-- <div class="form-group">
                   <input type="text" class="form-control form-control-lg" name="author" id="exampleInputEmail1" placeholder="Author" required>
                 </div>
 
@@ -71,9 +71,9 @@
                 </div>
                 <div class="form-group">
                   <input type="text" class="form-control form-control-lg" name="weight" id="exampleInputEmail1" placeholder="Weight" required>
-                </div>
+                </div> -->
                 <div class="mt-3">
-                  <input type="submit" name="storebook" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="Store Book">
+                  <input type="submit" name="searchbook" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" value="Search Book">
                 </div>
                </div>
 
