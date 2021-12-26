@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <!-- saved from url=(0085)https://www.bootstrapdash.com/demo/stellar-admin-free/jquery/pages/samples/login.html -->
 <html lang="en">
@@ -12,7 +13,8 @@
   <link rel="stylesheet" href="./login_files/simple-line-icons.css">
   <link rel="stylesheet" href="./login_files/flag-icon.min.css">
   <link rel="stylesheet" href="./login_files/vendor.bundle.base.css">
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   
   <link rel="stylesheet" href="./login_files/style.css" <!--="" end="" layout="" styles="" --="">
   <link rel="shortcut icon" href="https://www.bootstrapdash.com/demo/stellar-admin-free/jquery/images/favicon.png">
 </head>
@@ -28,15 +30,24 @@
                 <img src="./login_files/logo.svg">
               </div>
               <h4>Online Book Store</h4>
+              <?php 
+        if(!empty($login_err)){
+            echo '<div class="alert alert-danger">' . $login_err . '</div>';
+        }        
+        ?>
               <h6 class="font-weight-light">Sign in to continue.</h6>
-              <form class="pt-3" method="post" action="./login.php">
+              <form class="pt-3" method="post" action="./loginValidate.php">
                 <div class="form-group">
-                  <input type="text" class="form-control form-control-lg" name="username" id="exampleInputEmail1"
+                  <input type="text" class="form-control form-control-lg <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" name="username" id="exampleInputEmail1"
                     placeholder="Username" required>
+                    <span class="invalid-feedback">
+                   
+                    </span>
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control form-control-lg" name="password" id="exampleInputPassword1"
+                  <input type="password" class="form-control form-control-lg <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" name="password" id="exampleInputPassword1"
                     placeholder="Password" required>
+                    <span class="invalid-feedback"></span>
                 </div>
                 <div class="mt-3">
                   <input type="submit" name="signin" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"
@@ -50,7 +61,7 @@
                   </div>
                   <a href="#" class="auth-link text-black">Forgot password?</a>
                 </div>
-                <div class="text-center mt-4 font-weight-light"> Don't have an account? <a href="userSignUp.html" class="text-primary">Register</a>
+                <div class="text-center mt-4 font-weight-light"> Don't have an account? <a href="userSignUp.php" class="text-primary">Register</a>
                 </div>
 
               </form>
@@ -82,45 +93,41 @@
 </html>
 <?php
 
-    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['signin']))
-    {
- 
-   login();
-     
-    }
-    
-    function login()
-  {
-    echo "Seach called<br>";
-    $host="localhost";
-  $username="root";
-  $pwd="";
-  $con=mysqli_connect($host,$username,$pwd);
-  if($con)
-  {
+if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['signin'])) {
+
+  login();
+
+}
+
+function login()
+{
+  echo "Seach called<br>";
+  $host = "localhost";
+  $username = "root";
+  $pwd = "";
+  $con = mysqli_connect($host, $username, $pwd);
+  if ($con) {
     echo " Connection to mysql -Sucess<br>";
-    
-         
-           $con=mysqli_connect($host,$username,$pwd,"bookstore");
-           $sql="select * from users";
-           $result = $con->query($sql);
-          if ($result->num_rows > 0)
-           {
-            // output data of each row
-               echo"<table><tr><th>username </th> <th>password</th></tr>";
-              while($row = $result->fetch_assoc()) 
-              {
-                echo "<tr><td>".$row["UserName"]. "</td><td>". $row["Password"]."</tr><br>";
-              }
-              echo"</table>";
-            } 
-          else {
-                  echo "0 results";
-                }
+
+
+    $con = mysqli_connect($host, $username, $pwd, "bookstore");
+    $sql = "select * from users";
+    $result = $con->query($sql);
+    if ($result->num_rows > 0) {
+      // output data of each row
+      echo "<table><tr><th>username </th> <th>password</th></tr>";
+      while ($row = $result->fetch_assoc()) {
+        echo "<tr><td>" . $row["UserName"] . "</td><td>" . $row["Password"] . "</tr><br>";
+      }
+      echo "</table>";
+    }
+    else {
+      echo "0 results";
+    }
     $con->close();
   }
   else {
-    echo"Unable to connect to Database";
+    echo "Unable to connect to Database";
   }
 }
 ?>

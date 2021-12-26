@@ -34,10 +34,10 @@
             <nav class="navbar navbar-light bg-warning">
                 <div class="container">
                     <div class="col-4">
-                        <a class="navbar-brand" href="#">
+                        <!-- <a class="navbar-brand" href="#">
                                
                         <img src="https://ik.imagekit.io/qbkraoafhm32/PHP_project_/attachment_74026482_JFDXboyW-4Ja.png?updatedAt=1640080223146"  width="92" height="92" alt="...">
-                        </a>
+                        </a> -->
                     </div>
                     <div class="col-4">
                         <div class="input-group mb-3">
@@ -103,7 +103,7 @@
             </div>
         </nav>
     </section> -->
-
+ 
     <!-- Hero Section -->
 
     <section class="" id="">
@@ -119,7 +119,7 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="src/img/slider imgs/1.png" style="height:450px" class="d-block w-100" alt="...">
+                        <img src="src/img/slider imgs/1.png" style="width:20%;height:450px" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <div class="btn-shop">
                                 <button class="btn-lg btn-warning ">Shop Now</button>
@@ -128,7 +128,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="src/img/slider imgs/2.png" class="d-block w-100" alt="...">
+                        <img src="src/img/slider imgs/2.png" style="height:450px"  class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <div class="btn-shop">
                                 <button class="btn-lg btn-warning">Shop Now</button>
@@ -137,7 +137,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="src/img/slider imgs/3.png" class="d-block w-100" alt="...">
+                        <img src="src/img/slider imgs/3.png" style="height:450px"  class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <div class="btn-shop">
                                 <button class="btn-lg btn-warning">Shop Now</button>
