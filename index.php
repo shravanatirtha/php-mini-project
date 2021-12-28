@@ -34,10 +34,10 @@
             <nav class="navbar navbar-light bg-warning">
                 <div class="container">
                     <div class="col-4">
-                        <!-- <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="#">
                                
-                        <img src="https://ik.imagekit.io/qbkraoafhm32/PHP_project_/attachment_74026482_JFDXboyW-4Ja.png?updatedAt=1640080223146"  width="92" height="92" alt="...">
-                        </a> -->
+                        <img src="https://ik.imagekit.io/shravanatirtha/pathberries-log-tran_8NsaQ1PfY.png?updatedAt=1640678407413"  width="92" height="92" alt="...">
+                        </a>
                     </div>
                     <div class="col-4">
                     <form class="pt-12  " method="post" action="./searchBookValidate.php">
