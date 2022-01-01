@@ -1,3 +1,4 @@
 ### PHP Mini Project
-### Book Store Management
+### Online Book Store Management
+<p>This project is being built using WAMP stack and is currently under development</p>
  
